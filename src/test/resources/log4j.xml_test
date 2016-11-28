@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/"
+    debug="false">
+
+    <!-- APPENDER: console -->
+    <appender name="console" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-4r %-5p %c %x - %m%n" />
+        </layout>
+    </appender>
+
+    <category name="org.slf4j">
+        <priority value="DEBUG" />
+    </category>
+
+    <category name="com.sample">
+        <priority value="DEBUG" />
+    </category>
+
+    <root>
+        <level value="INFO" />
+        <appender-ref ref="console" />
+    </root>
+
+</log4j:configuration>
