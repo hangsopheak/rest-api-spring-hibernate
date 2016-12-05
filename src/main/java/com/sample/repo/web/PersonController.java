@@ -46,12 +46,12 @@ public class PersonController {
     }
 	
 	@RequestMapping(value= "/v1/{id}", method = RequestMethod.GET)
-    public ResponseEntity<Person> getPerson(@PathVariable int id){
+    public ResponseEntity<Person> getPerson(@PathVariable long id){
         return new ResponseEntity<>(personService.getPersonById(id), HttpStatus.OK);
     }
 	
 	@RequestMapping(value= "/v1/{id}", method = RequestMethod.POST)
-	public ResponseEntity<Person> updatePerson(@PathVariable int id, @ModelAttribute Person p){
+	public ResponseEntity<Person> updatePerson(@PathVariable long id, @ModelAttribute Person p){
 	       Person person = personService.getPersonById(id);
 	       if (person == null) {
 	           return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -64,7 +64,7 @@ public class PersonController {
 
 	   
 	@RequestMapping(value= "/v1/{id}", method = RequestMethod.DELETE)
-    public void removePerson(@PathVariable("id") int id){
+    public void removePerson(@PathVariable("id") long id){
         this.personService.removePerson(id);
         
     }

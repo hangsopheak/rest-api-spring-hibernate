@@ -44,17 +44,17 @@ public class PersonDAOImpl implements PersonDAO {
 	}
 
 	@Override
-	public Person getPersonById(int id) {
+	public Person getPersonById(long id) {
 		Session session = this.sessionFactory.getCurrentSession();		
-		Person p = (Person) session.load(Person.class, new Integer(id));
+		Person p = (Person) session.load(Person.class, new Long(id));
 		logger.info("Person loaded successfully, Person details="+p);
 		return p;
 	}
 
 	@Override
-	public void removePerson(int id) {
+	public void removePerson(long id) {
 		Session session = this.sessionFactory.getCurrentSession();
-		Person p = (Person) session.load(Person.class, new Integer(id));
+		Person p = (Person) session.load(Person.class, new Long(id));
 		if(null != p){
 			session.delete(p);
 		}

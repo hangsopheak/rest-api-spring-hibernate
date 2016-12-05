@@ -9,12 +9,19 @@
 		<param-name>contextClass</param-name>
 		<param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
 	</context-param>
-
-	<!-- Bootstrap the root application context as usual using ContextLoaderListener -->
-	<listener>
-		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-	</listener>
-	
+    <context-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>com.sample.server.MvcConfig</param-value>
+    </context-param>
+    <!-- Bootstrap the root application context as usual using ContextLoaderListener -->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+  <!-- custom listener -->
+    <listener>
+        <listener-class>com.sample.server.AppListener</listener-class>
+    </listener>
+    
 	<filter>
 		<filter-name>encodingFilter</filter-name>
 		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -48,6 +55,4 @@
 		<servlet-name>spring-dispatcher</servlet-name>
 		<url-pattern>/api/*</url-pattern>
 	</servlet-mapping>
-	
-
 </web-app>

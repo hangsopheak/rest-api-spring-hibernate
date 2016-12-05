@@ -35,13 +35,13 @@ public class PersonServiceImpl implements PersonService {
 
 	@Override
 	@Transactional
-	public Person getPersonById(int id) {
+	public Person getPersonById(long id) {
 		return this.personDAO.getPersonById(id);
 	}
 
 	@Override
 	@Transactional
-	public void removePerson(int id) {
+	public void removePerson(long id) {
 		this.personDAO.removePerson(id);
 	}
 

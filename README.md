@@ -31,3 +31,5 @@ update item : POST http://localhost:8080/api/persons/v1/1
 
 6 : Integrate Test cases : run command >> mvn clean test
 
+
+# How to get Srping bean from Servlet or Filter:
