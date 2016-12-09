@@ -14,25 +14,18 @@ import javax.persistence.Table;
 *
 */
 @Entity
-@Table(name="Person")
-public class Person {
+@Table(name="Person")   
+public class Person extends AbstractLongDomainEntity {
 
    @Id
    @Column(name="id")
    @GeneratedValue(strategy=GenerationType.IDENTITY)
-   private long id;
+   private Long id;
    
+   /**name*/
    private String name;
-   
+   /**country*/
    private String country;
-
-   public long getId() {
-       return id;
-   }
-
-   public void setId(long id) {
-       this.id = id;
-   }
 
    public String getName() {
        return name;
@@ -50,8 +43,22 @@ public class Person {
        this.country = country;
    }
    
-   @Override
    public String toString(){
        return "id="+id+", name="+name+", country="+country;
    }
+
+/**
+ * @return the id
+ */
+public Long getId() {
+    return id;
+}
+
+/**
+ * @param id the id to set
+ */
+public void setId(Long id) {
+    this.id = id;
+}
+
 }

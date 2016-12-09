@@ -17,7 +17,7 @@ public class PersonServiceTest extends AbstractWebAppTest {
     private static final Logger LOG = LoggerFactory.getLogger(PersonServiceTest.class);
     
     @Autowired
-    private PersonService service;    
+    private PersonService service;
    
     @org.junit.Test
     public void testSearch() throws Exception {
@@ -27,7 +27,7 @@ public class PersonServiceTest extends AbstractWebAppTest {
             //p.setId(100+i);
             p.setName("Name_" +i);
             p.setCountry("Country_"+i);
-            service.addPerson(p);
+            service.create(p);
             LOG.info("create persion " + i);
         }
         
@@ -39,11 +39,11 @@ public class PersonServiceTest extends AbstractWebAppTest {
         LOG.info("size : " + service.listPersons().size());
         
         Person p = new Person();
-        p.setId(10);
+        p.setId(10L);
         p.setName("update_Name_" );
         p.setCountry("updaet_Country_");
         //update
-        service.updatePerson(p);
+        service.update(p);
     }
 
 }

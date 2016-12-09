@@ -57,8 +57,9 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource);
-//        sessionFactory.setAnnotatedClasses(Person.class);
+      //  sessionFactory.setAnnotatedClasses(Person.class);
         sessionFactory.setPackagesToScan("com.sample.repo.domain");
+        
         
         sessionFactory.setHibernateProperties(hibernateProperties());
         
@@ -91,11 +92,8 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 //</bean>
     }
 
-//    
-    // -------------- Services -----------------------
-   
     // -------------- Message Converters ----------------------
-
+    
     @Override
     public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
 
@@ -114,14 +112,15 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();
     }
+    /**message properties*/
     @Bean
     public  MessageSource messageSource() {
-        ReloadableResourceBundleMessageSource message = new org.springframework.context.support.ReloadableResourceBundleMessageSource();
+        ReloadableResourceBundleMessageSource message = new ReloadableResourceBundleMessageSource();
         message.setBasename("classpath:messages");//classpath:messages
         message.setDefaultEncoding("UTF-8");
         return message;
     }
-////    // -------------- View Stuff -----------------------
+    // -------------- View Stuff -----------------------
     @Bean
     public UrlBasedViewResolver jspViewResolver() {
         UrlBasedViewResolver resolver = new org.springframework.web.servlet.view.UrlBasedViewResolver();
@@ -131,4 +130,5 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
         return resolver;
     }
    
+    
 }

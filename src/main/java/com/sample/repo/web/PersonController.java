@@ -35,10 +35,10 @@ public class PersonController {
 
         if (p.getId() == 0) {
             // new person, add it
-            this.personService.addPerson(p);
+            this.personService.create(p);
         } else {
             // existing person, call update
-            this.personService.updatePerson(p);
+            this.personService.update(p);
         }
 
         return new ResponseEntity<>(p, HttpStatus.OK);
@@ -58,7 +58,7 @@ public class PersonController {
 	       }
 	       p.setId(person.getId());
 	       //update
-	       personService.updatePerson(p);
+	       personService.update(p);
 	       return new ResponseEntity<>(p, HttpStatus.OK);
 	}
 
