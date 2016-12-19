@@ -6,7 +6,18 @@
     <artifactId>rest-api-spring-hibernate</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>sample Application</name>
+    <name>sample rest-api Application</name>
+
+     <developers>
+        <developer>
+            <id>Sophea</id>
+            <name>Sophea MAK</name>
+            <email>sopheamak@gmail.com</email>
+            <url>http://www.linkedin.com/in/sopheamak</url>
+        </developer>
+
+    </developers>
+
 
     <properties>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
