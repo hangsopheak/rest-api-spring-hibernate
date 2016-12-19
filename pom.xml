@@ -362,4 +362,21 @@
           <scope>test</scope>
       </dependency>
 	</dependencies>
+  
+   <profiles>
+    <profile>
+      <id>test</id>
+      <properties>
+        <logging.level>DEBUG</logging.level>
+         <server.url>http://server-test.com:8080</server.url>
+          </properties>
+    </profile>
+      <profile>
+      <id>prod</id>
+      <properties>
+        <logging.level>INFO</logging.level>
+         <server.url>http://server-prod.com</server.url>
+      </properties>
+    </profile>
+</profiles>
 </project>
