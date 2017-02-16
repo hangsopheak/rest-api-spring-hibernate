@@ -2,7 +2,6 @@ package com.sample.repo.dao;
 
 import java.util.List;
 
-import org.hibernate.LockMode;
 import org.hibernate.Session;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
