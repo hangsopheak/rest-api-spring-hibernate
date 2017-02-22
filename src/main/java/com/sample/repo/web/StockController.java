@@ -23,7 +23,7 @@ public class StockController {
 	
 	/**return as json REST-API*/
 	@RequestMapping(value = "/v1/all", method = RequestMethod.GET)
-    public ResponseEntity<List<Stock>> listPersons() {
+    public ResponseEntity<List<Stock>> lists() {
         return new ResponseEntity<>(dao.list(), HttpStatus.OK);
     }
 	
@@ -31,7 +31,7 @@ public class StockController {
     
 	
 	@RequestMapping(value= "/v1/{id}", method = RequestMethod.GET)
-    public ResponseEntity<Stock> getPerson(@PathVariable int id){
+    public ResponseEntity<Stock> getId(@PathVariable int id){
         return new ResponseEntity<>(dao.findStockById(id), HttpStatus.OK);
     }
 	
