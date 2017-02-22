@@ -38,6 +38,7 @@ public abstract class AbstractLongDomainEntity  implements Serializable {
 //    @Basic
 //    @JsonIgnore
 //    private String createdBy;
+    
     /**created date*/
     @Basic
     @JsonIgnore

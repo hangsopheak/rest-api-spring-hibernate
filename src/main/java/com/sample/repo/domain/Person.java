@@ -23,6 +23,7 @@ public class Person extends AbstractLongDomainEntity {
    private Long id;
    
    /**name*/
+   @Column(name="name")
    private String name;
    /**country*/
    private String country;

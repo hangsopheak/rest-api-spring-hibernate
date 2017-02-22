@@ -1,16 +1,19 @@
+DROP DATABASE if EXISTS sample;
+CREATE DATABASE sample;
+USE sample;
 DROP TABLE IF EXISTS `Person`;
 CREATE TABLE Person (
  id BIGINT(20) NOT NULL AUTO_INCREMENT,
  name VARCHAR(200), 
  country VARCHAR(200),
  version BIGINT(20),
- createdDate date  NULL,
+ createdDate timestamp default CURRENT_TIMESTAMP,
  updatedDate date  NULL,
  PRIMARY KEY (`id`) USING BTREE
  ) ENGINE=InnoDB AUTO_INCREMENT=80 DEFAULT CHARSET=utf8;
 
  INSERT INTO Person (id, name, country) values(1,'sophea', 'Cambodia');
- 
+  INSERT INTO Person (id, name, country) values(2,'somnang', 'Cambodia');
 
 DROP TABLE IF EXISTS `stock`;
 CREATE TABLE  `stock` (
