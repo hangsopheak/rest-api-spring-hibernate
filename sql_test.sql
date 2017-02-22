@@ -1,11 +1,11 @@
 DROP TABLE IF EXISTS `Person`;
 CREATE TABLE Person (
- id int(10) unsigned NOT NULL AUTO_INCREMENT,
+ id BIGINT(20) NOT NULL AUTO_INCREMENT,
  name VARCHAR(200), 
  country VARCHAR(200),
- version int(11),
- createdDate timestamp,
- updatedDate timestamp,
+ version BIGINT(20),
+ createdDate date  NULL,
+ updatedDate date  NULL,
  PRIMARY KEY (`id`) USING BTREE
  ) ENGINE=InnoDB AUTO_INCREMENT=80 DEFAULT CHARSET=utf8;
 
