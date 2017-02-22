@@ -1,12 +1,13 @@
+DROP TABLE IF EXISTS `Person`;
 CREATE TABLE Person (
  id int(10) unsigned NOT NULL AUTO_INCREMENT,
  name VARCHAR(200), 
  country VARCHAR(200),
  version int(11),
  createdDate timestamp,
- updatedDate timestamp
- 
- );
+ updatedDate timestamp,
+ PRIMARY KEY (`id`) USING BTREE
+ ) ENGINE=InnoDB AUTO_INCREMENT=80 DEFAULT CHARSET=utf8;
 
  INSERT INTO Person (id, name, country) values(1,'sophea', 'Cambodia');
  
