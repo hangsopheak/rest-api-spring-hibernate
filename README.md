@@ -271,6 +271,24 @@ Database connection is setup in xml persistence-db.xml using org.apache.commons.
 
 ```
 
+## application properties
+
+```
+## application properties
+
+application.version =${app.version}
+
+logging.level=${logging.level}
+
+
+#database connection 
+jdbc.hostAndPort=localhost:3306
+jdbc.databasename=sample
+jdbc.username=root
+jdbc.password=root
+
+```
+
 ## setup Hibernate configration 
 
 The configuration is used  with  java code annotation in MvcConfig.java
@@ -655,6 +673,18 @@ public class PersonController {
     }
 }
 
+```
+
+
+## test result
+
+run : mvn clean jetty:run
+
+open browser : http://localhost:8080/api/persons/v1/all
+
+You will see response as below
+
+```
 ```
 
 8 : Integrate Test cases : run command >> mvn clean test
