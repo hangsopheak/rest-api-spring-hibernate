@@ -96,7 +96,7 @@ CREATE TABLE `category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8; 
 ```
 
-In this example we use hibernate mapping with table Person Ojbect.
+In this example we use hibernate mapping with table Person Object.
 
 Class Person.java
 
