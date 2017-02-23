@@ -685,6 +685,22 @@ open browser : http://localhost:8080/api/persons/v1/all
 You will see response as below
 
 ```
+[
+
+    {
+        "id": 1,
+        "name": "sophea",
+        "country": "Cambodia",
+        "createdDate": "2017-02-23T21:30:41+0700"
+    },
+    {
+        "id": 2,
+        "name": "somnang",
+        "country": "Cambodia",
+        "createdDate": "2017-02-23T21:30:41+0700"
+    }
+
+]
 ```
 
 8 : Integrate Test cases : run command >> mvn clean test
