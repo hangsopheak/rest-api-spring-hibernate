@@ -131,6 +131,4 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
         resolver.setSuffix(".jsp");
         return resolver;
     }
-   
-    
 }
