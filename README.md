@@ -10,10 +10,20 @@ This is about java web backend service with REST-APIs, hibernate database connec
 1 : install JAVA JDK version >=1.8.x  (http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
 2 : install maven 3  (https://maven.apache.org/install.html)
+ 
+3 : install MySQL Server database
 
-3 : go to this project location by console
+4 : import sql file in mysql console : sql_test.sql 
 
-4 : run command >> mvn clean jetty:run (Jetty Server) or mvn clean tomcat7:run (Tomcat Server)
+```
+ mysql -u root -proot  < sqk.sql
+```
+
+5 : go to this project location by console
+
+6 : create class-path for eclipse :mvn eclipse:eclipse
+
+7 : run command >> mvn clean jetty:run (Jetty Server) or mvn clean tomcat7:run (Tomcat Server)
 
    
 ===============Test result with API when server started(Jetty/Tomcat)=======
